@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Revou 1</title>
+</head>
+<body>
+    <header>
+        <h1> 💸 Track My Spending </h1>
+        <p> Saldo : <span id="totalBalance">Rp0</span> </p>
+    </header>
+
+    <section>
+        <h2>🩵 Input Pengeluaran</h2>
+        <form id="transactionForm">
+            <label for="itemName">Nama Item</label>
+            <input type="text" id="itemName" required>
+
+            <label for="itemAmount">Jumlah (Rp)</label>
+            <input type="number" id="itemAmount" required>
+
+            <label for="itemCategory">Kategori</label>
+            <select id="itemCategory" required>
+                <option value="">-- Pilih Kategori --</option>
+                <option value="Food">Makanan</option>
+                <option value="Fun">Hiburan</option>
+                <option value="Transport">Transportasi</option>
+            </select>
+
+            <button type="submit">🤗 Tambah</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>✌️ Grafik Pengeluaran</h2>
+        <canvas id="expenseChart"></canvas>
+    </section>
+
+    <section>
+        <h3>📋 Daftar Transaksi</h3>
+        <div id="transactionList"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
